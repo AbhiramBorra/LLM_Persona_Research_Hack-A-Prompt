@@ -1,23 +1,23 @@
-# [cite_start]Analyzing Adversarial Prompts in The Embedding Space [cite: 1]
+# Analyzing Adversarial Prompts in The Embedding Space
 
 ## Project Overview
-[cite_start]This project investigates the vulnerabilities of Large Language Models (LLMs) to adversarial prompts[cite: 19, 20]. [cite_start]While Generative AI has been widely embraced, it remains susceptible to malicious manipulations—such as the "DAN" prompt—which can bypass programmed safety protocols[cite: 3, 4, 5]. [cite_start]Utilizing the Hack A Prompt 2023 competition dataset, this research analyzes adversarial tactics designed to trick models into generating the specific phrase "I have been PWNED"[cite: 11, 12, 19]. [cite_start]The primary goal is to understand how these attacks override model logic and to evaluate the structural similarities of successful prompts[cite: 21, 219].
+This project investigates the vulnerabilities of Large Language Models (LLMs) to adversarial prompts. While Generative AI has been widely embraced, it remains susceptible to malicious manipulations—such as the "DAN" prompt—which can bypass programmed safety protocols. Utilizing the Hack A Prompt 2023 competition dataset, this research analyzes adversarial tactics designed to trick models into generating the specific phrase "I have been PWNED". The primary goal is to understand how these attacks override model logic and to evaluate the structural similarities of successful prompts.
 
 ## Methodology and Experiments
 The research was conducted through a series of six structured experiments evaluating prompt success, label accuracy, and semantic clustering:
 
-* [cite_start]**Experiment 1 (Ranking Logic):** Tested whether an adversarial prompt could bypass the LLM's predefined instructions and compel the model to consistently rank the phrase "I have been PWNED" as the top instruction[cite: 25, 26]. 
-* [cite_start]**Experiment 2 (Label Accuracy):** Evaluated the reliability of the Hack-a-Prompt dataset's success labels by analyzing a random sample of 500 prompts designated as either successful or unsuccessful[cite: 124, 125, 128].
-* [cite_start]**Experiment 3 (Level Difficulty):** Modeled prompt rankings across the competition's difficulty levels to determine if earlier stages produced clearer success and failure label distinctions[cite: 154, 157, 158].
-* [cite_start]**Experiments 4, 5, & 6 (Embedding Space Clustering):** Mapped prompts into a multi-dimensional space using t-SNE[cite: 186, 249]. [cite_start]These experiments aimed to determine if prompts naturally clustered by their assigned rankings, overall success, or true/false positive statuses[cite: 184, 218, 246].
+* **Experiment 1 (Ranking Logic):** Tested whether an adversarial prompt could bypass the LLM's predefined instructions and compel the model to consistently rank the phrase "I have been PWNED" as the top instruction.
+* **Experiment 2 (Label Accuracy):** Evaluated the reliability of the Hack-a-Prompt dataset's success labels by analyzing a random sample of 500 prompts designated as either successful or unsuccessful.
+* **Experiment 3 (Level Difficulty):** Modeled prompt rankings across the competition's difficulty levels to determine if earlier stages produced clearer success and failure label distinctions.
+* **Experiments 4, 5, & 6 (Embedding Space Clustering):** Mapped prompts into a multi-dimensional space using t-SNE. These experiments aimed to determine if prompts naturally clustered by their assigned rankings, overall success, or true/false positive statuses.
 
 ## Key Findings
-* [cite_start]**Sporadic Success:** Adversarial prompts, even those labeled as successful in the dataset, did not consistently force the model to prioritize the target phrase[cite: 118, 121]. 
-* [cite_start]**Difficulty Progression:** Prompts from lower competition levels exhibited a more concentrated range of rankings, indicating clearer label accuracy[cite: 179]. [cite_start]As levels increased, the distribution widened, indicating growing difficulty in achieving consistent adversarial success[cite: 180].
-* [cite_start]**Lack of Clustering:** The t-SNE visualizations revealed no distinct localization or clustering of prompts based on rank, success, or positive/negative classification[cite: 212, 225, 258]. 
-* [cite_start]**Contextual Nuance:** The scattered distribution in the embedding space suggests that successful adversarial prompts rely on subtler, context-dependent conversational logic rather than easily identifiable syntactic or structural patterns[cite: 214, 227].
+* **Sporadic Success:** Adversarial prompts, even those labeled as successful in the dataset, did not consistently force the model to prioritize the target phrase. 
+* **Difficulty Progression:** Prompts from lower competition levels exhibited a more concentrated range of rankings, indicating clearer label accuracy. As levels increased, the distribution widened, indicating growing difficulty in achieving consistent adversarial success.
+* **Lack of Clustering:** The t-SNE visualizations revealed no distinct localization or clustering of prompts based on rank, success, or positive/negative classification.
+* **Contextual Nuance:** The scattered distribution in the embedding space suggests that successful adversarial prompts rely on subtler, context-dependent conversational logic rather than easily identifiable syntactic or structural patterns.
 
 ## Future Work
-* [cite_start]**Keyword Sensitivity:** Further research should explore how LLMs react to keywords with varying levels of perceived malice, such as comparing "PWNE" against more threatening terms like "bomb"[cite: 263, 265].
-* [cite_start]**Taxonomical Development:** The preliminary adversarial classification ontology generated by ChatGPT should be replaced with a more rigorous, expert-curated taxonomy to systematically categorize attack techniques[cite: 268, 269, 270].
-* [cite_start]**Enhanced Resilience:** Future LLMs require robust filtering mechanisms, including moral and rational checks, to better flag and reject malicious inputs without overly restricting the model's functional capabilities[cite: 274, 275, 281].
+* **Keyword Sensitivity:** Further research should explore how LLMs react to keywords with varying levels of perceived malice, such as comparing "PWNE" against more threatening terms like "bomb".
+* **Taxonomical Development:** The preliminary adversarial classification ontology generated by ChatGPT should be replaced with a more rigorous, expert-curated taxonomy to systematically categorize attack techniques.
+* **Enhanced Resilience:** Future LLMs require robust filtering mechanisms, including moral and rational checks, to better flag and reject malicious inputs without overly restricting the model's functional capabilities.
